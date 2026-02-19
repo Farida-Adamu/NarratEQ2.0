@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NarratEQ — Nigeria's Gender Equality Data Lab</title>
+  <meta name="description" content="NarratEQ consolidates gender equality data from credible Nigerian and global sources — so journalists, campaigners and policy advocates can find, use and cite the numbers that matter.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="main-nav" role="navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-name">NarratEQ</span>
+        <span class="nav-logo-sub">By Gatefield</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html" class="active">Data Room</a>
+        <a href="insights.html">Insights</a>
+        <a href="about.html">About</a>
+        <a href="#subscribe" class="nav-cta">Get Updates <span aria-hidden="true">&rarr;</span></a>
+      </div>
+
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay">
+    <a href="index.html">Data Room</a>
+    <a href="insights.html">Insights</a>
+    <a href="about.html">About</a>
+    <a href="#subscribe" class="nav-cta">Get Updates <span aria-hidden="true">&rarr;</span></a>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-dash" aria-hidden="true"></div>
+      <p class="hero-label">Nigeria's Gender Equality Data Lab</p>
+      <h1>The data shaping<br><em>women's equality</em> in Nigeria.</h1>
+      <p class="hero-description">NarratEQ consolidates gender equality data from credible Nigerian and global sources &mdash; so journalists, campaigners and policy advocates can find, use and cite the numbers that matter.</p>
+      <div class="hero-actions">
+        <a href="#data-room" class="btn btn-primary">Explore the Data Room</a>
+        <a href="insights.html" class="btn btn-outline">Read Latest Insights</a>
+        <a href="scorecard.html" class="btn btn-outline">2025 Gender Economy Scorecard</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATS BAR ========== -->
+  <section class="stats-bar" aria-label="Key statistics">
+    <div class="container">
+      <div class="stat-item">
+        <div class="stat-number">4%</div>
+        <div class="stat-description">Women in Parliament</div>
+        <div class="stat-source">INEC &middot; 2025</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">124th</div>
+        <div class="stat-description">Global Gender Gap Rank</div>
+        <div class="stat-source">WEF &middot; 2025</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">50%</div>
+        <div class="stat-description">Budget Spent on Women's Programs</div>
+        <div class="stat-source">BudgIT &middot; 2024</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">29%</div>
+        <div class="stat-description">Women in C-Suite Roles</div>
+        <div class="stat-source">WILAN &middot; 2025</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">1-in-5</div>
+        <div class="stat-description">Energy Sector Workers</div>
+        <div class="stat-source">NBS &middot; 2024</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DATA ROOM ========== -->
+  <main class="data-room" id="data-room">
+    <div class="container">
+
+      <!-- Sidebar Toggle (mobile/tablet) -->
+      <button class="sidebar-toggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="18" y2="18"/></svg>
+        Show Filters
+      </button>
+
+      <!-- Sidebar -->
+      <aside class="sidebar" role="complementary">
+
+        <!-- Search -->
+        <div class="sidebar-search">
+          <svg class="sidebar-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+          <input type="text" placeholder="Search datasets..." aria-label="Search datasets">
+        </div>
+
+        <!-- Sector Filter -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Filter by Sector</div>
+          <div class="filter-list">
+            <div class="filter-item active" data-sector="all">
+              <span class="filter-item-left">All</span>
+              <span class="filter-count">24</span>
+            </div>
+            <div class="filter-item" data-sector="political">
+              <span class="filter-item-left">
+                <span class="filter-dot" style="background: var(--gold)"></span>
+                Political Representation
+              </span>
+              <span class="filter-count">6</span>
+            </div>
+            <div class="filter-item" data-sector="economic">
+              <span class="filter-item-left">
+                <span class="filter-dot" style="background: var(--blue)"></span>
+                Economic Leadership
+              </span>
+              <span class="filter-count">5</span>
+            </div>
+            <div class="filter-item" data-sector="budget">
+              <span class="filter-item-left">
+                <span class="filter-dot" style="background: var(--coral)"></span>
+                Budget &amp; Policy
+              </span>
+              <span class="filter-count">4</span>
+            </div>
+            <div class="filter-item" data-sector="education">
+              <span class="filter-item-left">
+                <span class="filter-dot" style="background: #7C3AED"></span>
+                Education &amp; STEM
+              </span>
+              <span class="filter-count">4</span>
+            </div>
+            <div class="filter-item" data-sector="health">
+              <span class="filter-item-left">
+                <span class="filter-dot" style="background: #059669"></span>
+                Health
+              </span>
+              <span class="filter-count">3</span>
+            </div>
+            <div class="filter-item" data-sector="energy">
+              <span class="filter-item-left">
+                <span class="filter-dot" style="background: var(--muted)"></span>
+                Energy &amp; Infrastructure
+              </span>
+              <span class="filter-count">2</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Type -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Content Type</div>
+          <div class="filter-list">
+            <div class="filter-item active" data-type="stat-cards">
+              <span class="filter-item-left">Stat Cards</span>
+              <span class="filter-count">16</span>
+            </div>
+            <div class="filter-item active" data-type="insights">
+              <span class="filter-item-left">Insights</span>
+              <span class="filter-count">5</span>
+            </div>
+            <div class="filter-item active" data-type="story-starters">
+              <span class="filter-item-left">Story Starters</span>
+              <span class="filter-count">3</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Sources -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Data Sources</div>
+          <div class="source-list">
+            <div class="source-item">
+              <span class="source-dot" style="background: var(--blue)"></span>
+              WEF Gender Gap Report
+            </div>
+            <div class="source-item">
+              <span class="source-dot" style="background: var(--coral)"></span>
+              Reykjavik Index 2024
+            </div>
+            <div class="source-item">
+              <span class="source-dot" style="background: #059669"></span>
+              BudgIT Nigeria
+            </div>
+            <div class="source-item">
+              <span class="source-dot" style="background: var(--gold)"></span>
+              WILAN Leadership Report
+            </div>
+            <div class="source-item">
+              <span class="source-dot" style="background: #7C3AED"></span>
+              UN Women / NBS
+            </div>
+            <div class="source-item">
+              <span class="source-dot" style="background: var(--blue-mid)"></span>
+              World Bank Gender Portal
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- Content Area -->
+      <section class="content-area">
+        <div class="content-header">
+          <div>
+            <h2>Data Room</h2>
+            <p class="content-header-meta">24 datasets and insights &mdash; updated February 2026</p>
+          </div>
+          <div class="view-toggle">
+            <button class="active" aria-label="Card view" title="Card view">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="7" height="7" rx="1.5"/><rect x="10" y="1" width="7" height="7" rx="1.5"/><rect x="1" y="10" width="7" height="7" rx="1.5"/><rect x="10" y="10" width="7" height="7" rx="1.5"/></svg>
+            </button>
+            <button aria-label="List view" title="List view">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="1" y1="3.5" x2="17" y2="3.5"/><line x1="1" y1="9" x2="17" y2="9"/><line x1="1" y1="14.5" x2="17" y2="14.5"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STAT CARDS SECTION -->
+        <div class="section-label">Stat Cards</div>
+
+        <div class="card-grid">
+
+          <!-- Card 1: 4% Women in Parliament -->
+          <article class="stat-card" data-sector="political">
+            <div class="stat-card-header">
+              <span class="sector-tag political">Political Representation</span>
+              <span class="stat-card-year">2025</span>
+            </div>
+            <div class="stat-card-number">4%</div>
+            <h3 class="stat-card-title">Women in Nigeria's National Assembly</h3>
+            <p class="stat-card-insight">"Nigeria has one of the lowest rates of female parliamentary representation in Africa, ranking 180th globally."</p>
+            <p class="stat-card-source">Source: INEC 2025</p>
+            <div class="stat-card-footer">
+              <a href="#" class="stat-card-chart-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="4" width="4" height="17" rx="1"/></svg>
+                Chart
+              </a>
+              <a href="article.html" class="stat-card-read">Read our Analysis <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+
+          <!-- Card 2: 124th Global Gender Gap -->
+          <article class="stat-card" data-sector="economic">
+            <div class="stat-card-header">
+              <span class="sector-tag economic">Economic Leadership</span>
+              <span class="stat-card-year">2025</span>
+            </div>
+            <div class="stat-card-number">124th</div>
+            <h3 class="stat-card-title">Global Gender Gap Index Ranking</h3>
+            <p class="stat-card-insight">"Nigeria dropped two places in the WEF Gender Gap Index, driven by declines in political empowerment and economic participation."</p>
+            <p class="stat-card-source">Source: WEF Gender Gap Report 2025</p>
+            <div class="stat-card-footer">
+              <a href="#" class="stat-card-chart-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="4" width="4" height="17" rx="1"/></svg>
+                Chart
+              </a>
+              <a href="article.html" class="stat-card-read">Read our Analysis <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+
+          <!-- Card 3: 50% Budget Execution -->
+          <article class="stat-card" data-sector="budget">
+            <div class="stat-card-header">
+              <span class="sector-tag budget">Budget &amp; Policy</span>
+              <span class="stat-card-year">2024</span>
+            </div>
+            <div class="stat-card-number">50%</div>
+            <h3 class="stat-card-title">Women's Budget Execution Rate</h3>
+            <p class="stat-card-insight">"Only half of the funds earmarked for women-focused programs in the 2024 federal budget were actually disbursed."</p>
+            <p class="stat-card-source">Source: BudgIT Nigeria 2024</p>
+            <div class="stat-card-footer">
+              <a href="#" class="stat-card-chart-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="4" width="4" height="17" rx="1"/></svg>
+                Chart
+              </a>
+              <a href="article.html" class="stat-card-read">Read our Analysis <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+
+          <!-- Card 4: 29% C-Suite -->
+          <article class="stat-card" data-sector="economic">
+            <div class="stat-card-header">
+              <span class="sector-tag economic">Economic Leadership</span>
+              <span class="stat-card-year">2025</span>
+            </div>
+            <div class="stat-card-number">29%</div>
+            <h3 class="stat-card-title">Women in C-Suite Roles</h3>
+            <p class="stat-card-insight">"Fewer than a third of top executive roles in Nigerian companies are held by women, though the trend is slowly improving."</p>
+            <p class="stat-card-source">Source: WILAN 2025</p>
+            <div class="stat-card-footer">
+              <a href="#" class="stat-card-chart-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="4" width="4" height="17" rx="1"/></svg>
+                Chart
+              </a>
+              <a href="article.html" class="stat-card-read">Read our Analysis <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+
+          <!-- Card 5: $574B — WIDE CARD with chart -->
+          <article class="stat-card wide" data-sector="political">
+            <div class="stat-card-header">
+              <span class="sector-tag political">Political Representation</span>
+              <span class="stat-card-year">2025</span>
+            </div>
+            <div class="stat-card-body">
+              <div class="stat-card-text">
+                <div class="stat-card-number">$574B</div>
+                <h3 class="stat-card-title">GDP and Women's Cabinet Representation</h3>
+                <p class="stat-card-insight">"Research shows a correlation between women's presence in cabinet and GDP growth. Nigeria's GDP reached $574B while cabinet representation hovered near single digits."</p>
+                <p class="stat-card-source">Source: World Bank / INEC</p>
+                <div class="stat-card-footer">
+                  <a href="#" class="stat-card-chart-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="4" width="4" height="17" rx="1"/></svg>
+                    Chart
+                  </a>
+                  <a href="article.html" class="stat-card-read">Read our Analysis <span aria-hidden="true">&rarr;</span></a>
+                </div>
+              </div>
+              <div class="stat-card-chart">
+                <div class="chart-placeholder">
+                  <div class="chart-placeholder-inner">
+                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <rect x="4" y="28" width="6" height="14" rx="1" fill="#E3EEF9" stroke="#1D70B7"/>
+                      <rect x="13" y="20" width="6" height="22" rx="1" fill="#E3EEF9" stroke="#1D70B7"/>
+                      <rect x="22" y="14" width="6" height="28" rx="1" fill="#E3EEF9" stroke="#1D70B7"/>
+                      <rect x="31" y="10" width="6" height="32" rx="1" fill="#E3EEF9" stroke="#1D70B7"/>
+                      <rect x="40" y="6" width="6" height="36" rx="1" fill="#E3EEF9" stroke="#1D70B7"/>
+                      <line x1="2" y1="44" x2="48" y2="44" stroke="#E2DDD6"/>
+                    </svg>
+                    <span>Women's Cabinet Representation vs. Nigeria's GDP — 1999 to 2023</span>
+                    <span style="font-size: 0.75rem; margin-top: 4px; opacity: 0.6;">Chart image will be placed here</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: 1-in-5 Energy Workers -->
+          <article class="stat-card" data-sector="energy">
+            <div class="stat-card-header">
+              <span class="sector-tag energy">Energy &amp; Infrastructure</span>
+              <span class="stat-card-year">2024</span>
+            </div>
+            <div class="stat-card-number">1-in-5</div>
+            <h3 class="stat-card-title">Women in Nigeria's Energy Sector</h3>
+            <p class="stat-card-insight">"Women make up only 20% of the workforce in Nigeria's oil, gas and power sectors, concentrated in administrative rather than technical roles."</p>
+            <p class="stat-card-source">Source: NBS Labour Force 2024</p>
+            <div class="stat-card-footer">
+              <a href="#" class="stat-card-chart-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="4" width="4" height="17" rx="1"/></svg>
+                Chart
+              </a>
+              <a href="article.html" class="stat-card-read">Read our Analysis <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+
+          <!-- Card 7: 64% Public Comfort -->
+          <article class="stat-card" data-sector="political">
+            <div class="stat-card-header">
+              <span class="sector-tag political">Political Representation</span>
+              <span class="stat-card-year">2024</span>
+            </div>
+            <div class="stat-card-number">64%</div>
+            <h3 class="stat-card-title">Public Comfort with Women Leaders</h3>
+            <p class="stat-card-insight">"Nearly two-thirds of Nigerians say they are comfortable with women in corporate leadership — but only 50% say the same about political leadership."</p>
+            <p class="stat-card-source">Source: Reykjavik Index 2024</p>
+            <div class="stat-card-footer">
+              <a href="#" class="stat-card-chart-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="4" width="4" height="17" rx="1"/></svg>
+                Chart
+              </a>
+              <a href="article.html" class="stat-card-read">Read our Analysis <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+
+          <!-- Card 8: 22% STEM -->
+          <article class="stat-card" data-sector="education">
+            <div class="stat-card-header">
+              <span class="sector-tag education">Education &amp; STEM</span>
+              <span class="stat-card-year">2024</span>
+            </div>
+            <div class="stat-card-number">22%</div>
+            <h3 class="stat-card-title">Women Graduating in STEM Fields</h3>
+            <p class="stat-card-insight">"Less than a quarter of STEM graduates from Nigerian universities are women, reinforcing occupational segregation in high-growth sectors."</p>
+            <p class="stat-card-source">Source: NBS / UN Women 2024</p>
+            <div class="stat-card-footer">
+              <a href="#" class="stat-card-chart-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="4" width="4" height="17" rx="1"/></svg>
+                Chart
+              </a>
+              <a href="article.html" class="stat-card-read">Read our Analysis <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+
+          <!-- Card 9: 9 of 47 Cabinet Ministers -->
+          <article class="stat-card" data-sector="political">
+            <div class="stat-card-header">
+              <span class="sector-tag political">Political Representation</span>
+              <span class="stat-card-year">2025</span>
+            </div>
+            <div class="stat-card-number">9 of 47</div>
+            <h3 class="stat-card-title">Women Cabinet Ministers</h3>
+            <p class="stat-card-insight">"Only 9 of Nigeria's 47 cabinet ministers are women — a share that has barely changed in two decades despite advocacy efforts."</p>
+            <p class="stat-card-source">Source: Presidency Records 2025</p>
+            <div class="stat-card-footer">
+              <a href="#" class="stat-card-chart-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="4" width="4" height="17" rx="1"/></svg>
+                Chart
+              </a>
+              <a href="article.html" class="stat-card-read">Read our Analysis <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+
+          <!-- Card 10: 33% Maternal Health -->
+          <article class="stat-card" data-sector="health">
+            <div class="stat-card-header">
+              <span class="sector-tag health">Health</span>
+              <span class="stat-card-year">2024</span>
+            </div>
+            <div class="stat-card-number">33%</div>
+            <h3 class="stat-card-title">Women with Access to Quality Maternal Care</h3>
+            <p class="stat-card-insight">"Only a third of Nigerian women have access to adequate maternal healthcare, with rural areas disproportionately underserved."</p>
+            <p class="stat-card-source">Source: UN Women / NBS 2024</p>
+            <div class="stat-card-footer">
+              <a href="#" class="stat-card-chart-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="4" width="4" height="17" rx="1"/></svg>
+                Chart
+              </a>
+              <a href="article.html" class="stat-card-read">Read our Analysis <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- INSIGHTS SECTION -->
+        <div class="section-label" style="margin-top: 48px;">Insights</div>
+
+        <div class="card-grid">
+
+          <!-- Insight 1 -->
+          <article class="insight-card" data-sector="political">
+            <div class="insight-card-header">
+              <span class="sector-tag political">Political Representation</span>
+              <span class="stat-card-year">Feb 2026</span>
+            </div>
+            <h3 class="insight-card-title">Nigeria is paying an economic price for excluding women from politics</h3>
+            <p class="insight-card-excerpt">Research across 30 countries shows a correlation between women's cabinet representation and GDP growth. Nigeria's persistent gender gap in political leadership may be costing the economy more than previously understood.</p>
+            <p class="insight-card-meta">By Anu Bukola &middot; 4 min read</p>
+            <div class="insight-card-footer">
+              <a href="article.html" class="stat-card-read">Read Analysis <span aria-hidden="true">&rarr;</span></a>
+              <a href="#" class="stat-card-chart-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download
+              </a>
+            </div>
+          </article>
+
+          <!-- Insight 2 -->
+          <article class="insight-card" data-sector="economic">
+            <div class="insight-card-header">
+              <span class="sector-tag economic">Economic Leadership</span>
+              <span class="stat-card-year">Jan 2026</span>
+            </div>
+            <h3 class="insight-card-title">The boardroom ceiling: Why Nigerian women still can't break through</h3>
+            <p class="insight-card-excerpt">Despite modest gains in C-suite representation, women remain locked out of the most powerful board positions. The data reveals a persistent structural barrier that mentorship alone cannot fix.</p>
+            <p class="insight-card-meta">By Anu Bukola &middot; 5 min read</p>
+            <div class="insight-card-footer">
+              <a href="article.html" class="stat-card-read">Read Analysis <span aria-hidden="true">&rarr;</span></a>
+              <a href="#" class="stat-card-chart-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download
+              </a>
+            </div>
+          </article>
+
+          <!-- Insight 3 -->
+          <article class="insight-card" data-sector="budget">
+            <div class="insight-card-header">
+              <span class="sector-tag budget">Budget &amp; Policy</span>
+              <span class="stat-card-year">Oct 2025</span>
+            </div>
+            <h3 class="insight-card-title">Where does the money go? Tracking Nigeria's gender budget execution</h3>
+            <p class="insight-card-excerpt">Year after year, the federal government allocates billions for women-focused programs. Year after year, roughly half goes unspent. This analysis traces where the gap between promise and delivery occurs.</p>
+            <p class="insight-card-meta">By Anu Bukola &middot; 6 min read</p>
+            <div class="insight-card-footer">
+              <a href="article.html" class="stat-card-read">Read Analysis <span aria-hidden="true">&rarr;</span></a>
+              <a href="#" class="stat-card-chart-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ========== SUBSCRIBE STRIP ========== -->
+  <section class="subscribe-strip" id="subscribe">
+    <div class="container">
+      <div>
+        <h3>Get insights in your inbox</h3>
+        <p>Monthly data updates and analysis on gender equality in Nigeria.</p>
+      </div>
+      <form class="subscribe-form" onsubmit="return false;">
+        <input type="email" placeholder="Your email address" aria-label="Email address" required>
+        <button type="submit">Subscribe <span aria-hidden="true">&rarr;</span></button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 NarratEQ &middot; A Gatefield Impact Foundation Project</p>
+      <p><a href="#">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
