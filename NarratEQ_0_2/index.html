@@ -25,9 +25,6 @@
       </a>
 
       <div class="nav-links">
-        <a href="index.html" class="active">Data Room</a>
-        <a href="insights.html">Insights</a>
-        <a href="about.html">About</a>
         <a href="#subscribe" class="nav-cta">Get Updates <span aria-hidden="true">&rarr;</span></a>
       </div>
 
@@ -41,9 +38,6 @@
 
   <!-- Mobile Nav Overlay -->
   <div class="mobile-nav-overlay">
-    <a href="index.html">Data Room</a>
-    <a href="insights.html">Insights</a>
-    <a href="about.html">About</a>
     <a href="#subscribe" class="nav-cta">Get Updates <span aria-hidden="true">&rarr;</span></a>
   </div>
 
@@ -54,15 +48,13 @@
       <h1>The data shaping<br><em>women's equality</em> in Nigeria.</h1>
       <p class="hero-description">NarratEQ consolidates gender equality data from credible Nigerian and global sources, so journalists, campaigners and policy advocates can find, use and cite the numbers that matter.</p>
       <div class="hero-actions">
-        <a href="#data-room" class="btn btn-primary">Explore the Data Room</a>
-        <a href="insights.html" class="btn btn-outline">Read Latest Insights</a>
-        <span class="btn btn-outline btn-disabled" title="Coming soon">2025 Gender Economy Scorecard</span>
+        <a href="#stats" class="btn btn-primary">Explore the Numbers</a>
       </div>
     </div>
   </section>
 
   <!-- ========== STATS BAR ========== -->
-  <section class="stats-bar" aria-label="Key statistics">
+  <section class="stats-bar" id="stats" aria-label="Key statistics">
     <div class="container">
       <div class="stat-item">
         <div class="stat-number">124th</div>
@@ -75,9 +67,9 @@
         <div class="stat-source">INEC &middot; 2025</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">9 of 47</div>
+        <div class="stat-number">8%</div>
         <div class="stat-description">Women Cabinet Ministers</div>
-        <div class="stat-source">Presidency &middot; 2025</div>
+        <div class="stat-source">UN Women &middot; 2025</div>
       </div>
       <div class="stat-item">
         <div class="stat-number">0 of 36</div>
@@ -92,167 +84,73 @@
     </div>
   </section>
 
-  <!-- ========== DATA ROOM ========== -->
-  <main class="data-room" id="data-room">
+  <!-- ========== STAT CARDS ========== -->
+  <main class="cards-section" id="cards">
     <div class="container">
 
-      <!-- Sidebar Toggle (mobile/tablet) -->
-      <button class="sidebar-toggle">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="18" y2="18"/></svg>
-        Show Filters
-      </button>
+      <div class="card-grid">
 
-      <!-- Sidebar -->
-      <aside class="sidebar" role="complementary">
-
-        <!-- Search -->
-        <div class="sidebar-search">
-          <svg class="sidebar-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
-          <input type="text" placeholder="Search datasets..." aria-label="Search datasets">
-        </div>
-
-        <!-- Sector Filter -->
-        <div class="sidebar-section">
-          <div class="sidebar-section-title">Filter by Sector</div>
-          <div class="filter-list">
-            <div class="filter-item active" data-sector="all">
-              <span class="filter-item-left">All</span>
-              <span class="filter-count">5</span>
-            </div>
-            <div class="filter-item" data-sector="political">
-              <span class="filter-item-left">
-                <span class="filter-dot" style="background: var(--gold)"></span>
-                Political Representation
-              </span>
-              <span class="filter-count">3</span>
-            </div>
-            <div class="filter-item" data-sector="economic">
-              <span class="filter-item-left">
-                <span class="filter-dot" style="background: var(--blue)"></span>
-                Economic Leadership
-              </span>
-              <span class="filter-count">2</span>
-            </div>
+        <!-- Card 1: 124th Global Gender Gap Rank -->
+        <article class="stat-card">
+          <div class="stat-card-header">
+            <span class="sector-tag economic">Economic Leadership</span>
+            <span class="stat-card-year">2025</span>
           </div>
-        </div>
+          <div class="stat-card-number">124th</div>
+          <h3 class="stat-card-title">Global Gender Gap Index Ranking</h3>
+          <p class="stat-card-insight">Nigeria dropped two places in the WEF Gender Gap Index, driven by declines in political empowerment and economic participation.</p>
+          <p class="stat-card-source">Source: WEF Gender Gap Report 2025</p>
+        </article>
 
-        <!-- Data Sources -->
-        <div class="sidebar-section">
-          <div class="sidebar-section-title">Data Sources</div>
-          <div class="source-list">
-            <div class="source-item">
-              <span class="source-dot" style="background: var(--blue)"></span>
-              WEF Gender Gap Report
-            </div>
-            <div class="source-item">
-              <span class="source-dot" style="background: var(--gold)"></span>
-              INEC Election Data
-            </div>
-            <div class="source-item">
-              <span class="source-dot" style="background: var(--coral)"></span>
-              Presidency Records
-            </div>
-            <div class="source-item">
-              <span class="source-dot" style="background: #7C3AED"></span>
-              WILAN Leadership Report
-            </div>
+        <!-- Card 2: 4% Women in Parliament -->
+        <article class="stat-card">
+          <div class="stat-card-header">
+            <span class="sector-tag political">Political Representation</span>
+            <span class="stat-card-year">2025</span>
           </div>
-        </div>
+          <div class="stat-card-number">4%</div>
+          <h3 class="stat-card-title">Women in Nigeria's Parliament</h3>
+          <p class="stat-card-insight">Nigeria has one of the lowest rates of female parliamentary representation in Africa, ranking 180th out of 190 countries globally.</p>
+          <p class="stat-card-source">Source: INEC 2025</p>
+        </article>
 
-      </aside>
-
-      <!-- Content Area -->
-      <section class="content-area">
-        <div class="content-header">
-          <div>
-            <h2>Data Room</h2>
-            <p class="content-header-meta">5 key datasets &mdash; updated February 2026</p>
+        <!-- Card 3: 8% Cabinet Ministers -->
+        <article class="stat-card">
+          <div class="stat-card-header">
+            <span class="sector-tag political">Political Representation</span>
+            <span class="stat-card-year">2025</span>
           </div>
-        </div>
+          <div class="stat-card-number">8%</div>
+          <h3 class="stat-card-title">Women Cabinet Ministers</h3>
+          <p class="stat-card-insight">Women hold just 8% of cabinet positions in Nigeria, well below the global average and the African continental average of 24%.</p>
+          <p class="stat-card-source">Source: UN Women 2025</p>
+        </article>
 
-        <!-- STAT CARDS -->
-        <div class="section-label">Key Statistics</div>
+        <!-- Card 4: 0 of 36 Women State Governors -->
+        <article class="stat-card">
+          <div class="stat-card-header">
+            <span class="sector-tag political">Political Representation</span>
+            <span class="stat-card-year">2025</span>
+          </div>
+          <div class="stat-card-number">0 of 36</div>
+          <h3 class="stat-card-title">Women State Governors</h3>
+          <p class="stat-card-insight">Nigeria has never elected a female state governor. All 36 governorship seats are held by men, making it one of the starkest gender gaps in Nigerian politics.</p>
+          <p class="stat-card-source">Source: INEC 2025</p>
+        </article>
 
-        <div class="card-grid">
+        <!-- Card 5: 29% Women in C-Suite -->
+        <article class="stat-card">
+          <div class="stat-card-header">
+            <span class="sector-tag economic">Economic Leadership</span>
+            <span class="stat-card-year">2025</span>
+          </div>
+          <div class="stat-card-number">29%</div>
+          <h3 class="stat-card-title">Women in C-Suite Roles</h3>
+          <p class="stat-card-insight">Fewer than a third of top executive roles in Nigerian companies are held by women, though the trend is slowly improving year on year.</p>
+          <p class="stat-card-source">Source: WILAN 2025</p>
+        </article>
 
-          <!-- Card 1: 124th Global Gender Gap Rank -->
-          <article class="stat-card" data-sector="economic">
-            <div class="stat-card-header">
-              <span class="sector-tag economic">Economic Leadership</span>
-              <span class="stat-card-year">2025</span>
-            </div>
-            <div class="stat-card-number">124th</div>
-            <h3 class="stat-card-title">Global Gender Gap Index Ranking</h3>
-            <p class="stat-card-insight">Nigeria dropped two places in the WEF Gender Gap Index, driven by declines in political empowerment and economic participation.</p>
-            <p class="stat-card-source">Source: WEF Gender Gap Report 2025</p>
-            <div class="stat-card-footer">
-              <a href="article.html" class="stat-card-read">Read our Analysis <span aria-hidden="true">&rarr;</span></a>
-            </div>
-          </article>
-
-          <!-- Card 2: 4% Women in Parliament -->
-          <article class="stat-card" data-sector="political">
-            <div class="stat-card-header">
-              <span class="sector-tag political">Political Representation</span>
-              <span class="stat-card-year">2025</span>
-            </div>
-            <div class="stat-card-number">4%</div>
-            <h3 class="stat-card-title">Women in Nigeria's Parliament</h3>
-            <p class="stat-card-insight">Nigeria has one of the lowest rates of female parliamentary representation in Africa, ranking 180th out of 190 countries globally.</p>
-            <p class="stat-card-source">Source: INEC 2025</p>
-            <div class="stat-card-footer">
-              <a href="article.html" class="stat-card-read">Read our Analysis <span aria-hidden="true">&rarr;</span></a>
-            </div>
-          </article>
-
-          <!-- Card 3: 9 of 47 Cabinet Ministers -->
-          <article class="stat-card" data-sector="political">
-            <div class="stat-card-header">
-              <span class="sector-tag political">Political Representation</span>
-              <span class="stat-card-year">2025</span>
-            </div>
-            <div class="stat-card-number">9 of 47</div>
-            <h3 class="stat-card-title">Women Cabinet Ministers</h3>
-            <p class="stat-card-insight">Only 9 of Nigeria's 47 cabinet ministers are women &mdash; a share that has barely changed in two decades despite sustained advocacy efforts.</p>
-            <p class="stat-card-source">Source: Presidency Records 2025</p>
-            <div class="stat-card-footer">
-              <a href="article.html" class="stat-card-read">Read our Analysis <span aria-hidden="true">&rarr;</span></a>
-            </div>
-          </article>
-
-          <!-- Card 4: 0 of 36 Women State Governors -->
-          <article class="stat-card" data-sector="political">
-            <div class="stat-card-header">
-              <span class="sector-tag political">Political Representation</span>
-              <span class="stat-card-year">2025</span>
-            </div>
-            <div class="stat-card-number">0 of 36</div>
-            <h3 class="stat-card-title">Women State Governors</h3>
-            <p class="stat-card-insight">Nigeria has never elected a female state governor. All 36 governorship seats are held by men, making it one of the starkest gender gaps in Nigerian politics.</p>
-            <p class="stat-card-source">Source: INEC 2025</p>
-            <div class="stat-card-footer">
-              <a href="article.html" class="stat-card-read">Read our Analysis <span aria-hidden="true">&rarr;</span></a>
-            </div>
-          </article>
-
-          <!-- Card 5: 29% Women in C-Suite -->
-          <article class="stat-card" data-sector="economic">
-            <div class="stat-card-header">
-              <span class="sector-tag economic">Economic Leadership</span>
-              <span class="stat-card-year">2025</span>
-            </div>
-            <div class="stat-card-number">29%</div>
-            <h3 class="stat-card-title">Women in C-Suite Roles</h3>
-            <p class="stat-card-insight">Fewer than a third of top executive roles in Nigerian companies are held by women, though the trend is slowly improving year on year.</p>
-            <p class="stat-card-source">Source: WILAN 2025</p>
-            <div class="stat-card-footer">
-              <a href="article.html" class="stat-card-read">Read our Analysis <span aria-hidden="true">&rarr;</span></a>
-            </div>
-          </article>
-
-        </div>
-
-      </section>
+      </div>
 
     </div>
   </main>

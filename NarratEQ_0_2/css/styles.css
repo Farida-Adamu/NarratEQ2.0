@@ -316,6 +316,24 @@ h4 { font-size: 1.125rem; }
   pointer-events: none;
 }
 
+/* --- Cards Section (standalone, no sidebar) --- */
+.cards-section {
+  padding: 56px 0 80px;
+}
+
+.cards-section .container {
+  max-width: 960px;
+}
+
+.cards-section .card-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cards-section .stat-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: calc(50% - 10px);
+}
+
 /* --- Stats Bar --- */
 .stats-bar {
   background: var(--blue);
