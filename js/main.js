@@ -116,4 +116,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* --- Insights Page: Filter Tabs --- */
+  const filterTabs = document.querySelectorAll('.filter-tab');
+
+  if (filterTabs.length > 0) {
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filter = tab.dataset.filter;
+        const rows = document.querySelectorAll('.insight-row');
+
+        rows.forEach(row => {
+          if (filter === 'all') {
+            row.style.display = '';
+          } else {
+            row.style.display = (row.dataset.sector === filter) ? '' : 'none';
+          }
+        });
+      });
+    });
+  }
+
+  /* --- Scorecard: Animate indicator bars on scroll --- */
+  const indicatorBars = document.querySelectorAll('.domain-indicator-bar');
+
+  if (indicatorBars.length > 0) {
+    // Start bars at 0 width, animate when visible
+    indicatorBars.forEach(bar => {
+      bar.dataset.targetWidth = bar.style.width;
+      bar.style.width = '0%';
+    });
+
+    const animateBars = () => {
+      indicatorBars.forEach(bar => {
+        const rect = bar.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50 && bar.style.width === '0%') {
+          bar.style.width = bar.dataset.targetWidth;
+        }
+      });
+    };
+
+    window.addEventListener('scroll', animateBars, { passive: true });
+    // Trigger once on load
+    animateBars();
+  }
+
 });
