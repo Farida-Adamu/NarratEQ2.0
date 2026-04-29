@@ -1237,6 +1237,28 @@ h4 { font-size: 1.125rem; }
     width: 100%;
   }
 
+  .latest-insights-section {
+    padding: 40px 0 56px;
+  }
+
+  .latest-insights-heading {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+  }
+
+  .insights-list-compact .insight-row-title {
+    font-size: 1.05rem;
+  }
+
+  .view-all-link {
+    margin-top: 32px;
+  }
+
+  .btn-outline-dark {
+    width: 100%;
+    justify-content: center;
+  }
+
   .site-footer .container {
     flex-direction: column;
     gap: 8px;
@@ -1742,6 +1764,59 @@ h4 { font-size: 1.125rem; }
   line-height: 1.4;
   color: var(--muted);
   letter-spacing: 0.02em;
+}
+
+
+/* --- Landing Page: Latest Insights Section --- */
+.latest-insights-section {
+  padding: 64px 0 80px;
+  background: var(--white);
+}
+
+.latest-insights-heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 32px;
+  color: var(--ink);
+}
+
+.insights-list-compact .insight-row {
+  padding: 24px 0;
+}
+
+.insights-list-compact .insight-row:first-child {
+  padding-top: 0;
+}
+
+.insights-list-compact .insight-row-title {
+  font-size: 1.2rem;
+}
+
+.view-all-link {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-outline-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  color: var(--ink);
+  background: transparent;
+  border: 1.5px solid var(--ink);
+  border-radius: 8px;
+  transition: background 200ms ease, color 200ms ease;
+  text-decoration: none;
+}
+
+.btn-outline-dark:hover {
+  background: var(--ink);
+  color: var(--white);
 }
 
 
